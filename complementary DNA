@@ -1,0 +1,20 @@
+function DNAStrand(dna){
+ let rnaStrand = '';
+  for (let i = 0; i < dna.length; i++) {
+    let char = dna[i];
+    if (char === 'A') {
+    rnaStrand += 'T';
+    }
+    else if (char === 'T') {
+      rnaStrand += 'A';
+    }
+    else if (char === 'G') {
+      rnaStrand += 'C';
+    }
+    else if (char === 'C') {
+      rnaStrand += 'G';
+    }
+  }
+return rnaStrand;
+    
+}

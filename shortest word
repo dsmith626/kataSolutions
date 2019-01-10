@@ -1,0 +1,13 @@
+function findShort(s){
+  let sentence = s.split(' ');
+  let minNum = 1000000000; // wont work for words with chars >  minNum
+  for (let i = 0; i < sentence.length; i++) {
+    let word = sentence[i];
+    if (word.length < minNum) {
+      minNum = word.length;
+    }
+    }
+  
+  return(minNum);
+    
+}

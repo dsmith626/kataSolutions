@@ -1,0 +1,18 @@
+function multiplicationTable(row,col){
+  var table = [];
+  var firstArr = [];
+
+  for (var i = 1; i <= col; i++) {
+    firstArr.push(i);
+   }
+   table.push(firstArr);
+   for (var i = 2; i <= row; i++){
+    var newArr = [];
+      for (var j = 0; j < firstArr.length; j++){
+        const c = firstArr[j];
+        newArr.push(c * i);
+    }
+      table.push(newArr);
+   }
+  return table;
+}

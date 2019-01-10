@@ -1,0 +1,23 @@
+function digital_root(n) {
+  n = n.toString();
+  var nums = n.split('');
+  var root = 0;
+  for(var i = 0; i <nums.length; i++){
+    root += Number(nums[i]);
+  }
+    var stringRoot = root.toString();
+  if(stringRoot.length === 1){
+    return root;
+  }
+  else{
+    while(stringRoot.length !== 1){
+      nums = stringRoot.split('');
+      root = 0;
+      for(var j = 0; j < nums.length; j++){
+        root += Number(nums[j]);
+       }
+      stringRoot = root.toString();
+    }
+    return root;
+  }
+}

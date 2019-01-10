@@ -1,0 +1,21 @@
+function accum(s) {
+	
+  let string = s.toLowerCase(); // prevents subsequent char additions from being caps
+  let newAcc = '';
+  let count = 0; // used to be able to tell how many additional chars / add -
+  
+  for (let i = 0; i < string.length; i++) {
+    count++;
+    let char = string[i];
+    newAcc += char.toUpperCase();
+    for (let j = 1; j < count; j++){
+      newAcc += char;
+   
+    }
+     
+      if (count < string.length){
+        newAcc += '-';
+    }
+  }
+  return(newAcc);
+}

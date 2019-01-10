@@ -1,0 +1,14 @@
+function maskify(cc) {
+  let masked = "";
+  for (let i = 0; i < cc.length; i++) {
+    let char = cc[i];
+    if (i < cc.length - 4){
+      let char = '#';
+      masked += char;
+    } else {
+      masked += char;
+    }
+
+   }
+  return masked;
+}

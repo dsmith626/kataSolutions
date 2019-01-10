@@ -1,0 +1,16 @@
+function rot13(message){
+ 
+  let alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+  var rot = "";
+  var arr = message.split("");
+  for(var i = 0; i < message.length; i++){
+    var current = arr[i];
+    if(alphabet.indexOf(current) === -1){
+      rot += current;
+    }else{
+      rot += alphabet.charAt(alphabet.indexOf(current)+13);
+    }
+  }
+  return rot;
+}

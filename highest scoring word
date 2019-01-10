@@ -1,0 +1,25 @@
+function high(x){
+  let array = x.split(" ");
+  
+  let maxVal = 0;
+  let maxWord = "";
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  for (var i = 0; i < array.length; i++){
+    let currentWord = array[i];
+    let wordVal = 0;
+    for (var j = 0; j < currentWord.length; j++){
+      let letter = currentWord[j];
+      wordVal += alphabet.indexOf(letter) + 1;
+      
+     }
+  
+    if (wordVal > maxVal){
+        maxVal = wordVal;
+        maxWord = currentWord;
+      } else{
+        continue;
+        }
+    }
+    return maxWord;
+  
+}

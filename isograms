@@ -1,0 +1,10 @@
+function isIsogram(str) {
+  
+  var strArr = str.toLowerCase(); // changes to all lower case
+  for (var i = 0; i < strArr.length; i++) 
+    for (var j = i + 1; j < strArr.length; j++) // compares i value character to all values after, prevents checking itself
+     if (strArr[i] === strArr[j]) 
+       return false;
+     
+  return true;
+}

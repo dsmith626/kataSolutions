@@ -1,0 +1,22 @@
+function XO(str) {
+let sent = str.toLowerCase();
+
+let xCount = 0;
+let oCount = 0;  
+
+for (let i = 0; i < sent.length; i++) {
+    let char = sent[i];
+    if (char === 'x') {
+      xCount++;
+    } 
+  else if (char === 'o'){
+        oCount++;
+     }
+  }
+  if (xCount === oCount) {
+  return true;
+  }
+  else {
+    return false;
+  }
+}
